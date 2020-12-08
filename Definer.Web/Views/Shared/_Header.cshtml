@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="navbar">
+    <div class="logo">
+        <a href="/">definer</a>
+    </div>
+    <form action="/" method="get" id="search" class="search-form">
+        <input type="text" class="box" />
+        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form>
+    <div class="personal">
+        <ul class="pmain">
+            <li><a href="/"><i class="far fa-user fa-lg"></i></a></li>
+            <li><a href="/"><i class="far fa-envelope fa-lg"></i></a></li>
+            <li>
+                <div class="dropdown">
+                    <a href="/" class="dropbtn"><i class="fas fa-ellipsis-h fa-lg"></i></a>
+                    <div class="dd-content">
+                        <ul>
+                            <li><a href="/">settings</a></li>
+                            <li><a href="/">test</a></li>
+                            <li class="divider"><a href="/">logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

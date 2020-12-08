@@ -10,7 +10,6 @@ namespace Definer.Web
         {
             bundles.Add(new StyleBundle("~/bundles/style")
               .Include("~/Content/plugin/jqueryui/css/jquery-ui.min.css", new CssRewriteUrlTransform())
-              .Include("~/Content/plugin/bootstrap/css/bootstrap.min.css", new CssRewriteUrlTransform())
               .Include("~/Content/plugin/fontawesome/css/font-awasome.css", new CssRewriteUrlTransform())
               .Include("~/Content/plugin/jqueryconfirm/css/jquery-confirm.css", new CssRewriteUrlTransform())
               .Include("~/Content/css/Style.min.css", new CssRewriteUrlTransform()));
@@ -19,7 +18,6 @@ namespace Definer.Web
             bundles.Add(new ScriptBundle("~/bundles/scripts")
                 .Include("~/Content/plugin/jquery/js/jquery-3.3.1.min.js")
                 .Include("~/Content/plugin/jqueryui/js/jquery-ui.js")
-                .Include("~/Content/plugin/bootstrap/js/bootstrap.min.js")
                 .Include("~/Content/plugin/jqueryconfirm/js/jquery-confirm.js"));
 
             #region Validate 

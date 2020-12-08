@@ -128,11 +128,8 @@
   <ItemGroup>
     <Content Include="Content\css\Style.css" />
     <Content Include="Content\css\Style.min.css" />
+    <Content Include="Content\img\logo\Definer.png" />
     <Content Include="Content\plugin\animate\css\animate.min.css" />
-    <Content Include="Content\plugin\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="Content\plugin\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Content\plugin\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\plugin\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\plugin\daterangepicker\css\daterangepicker.css" />
     <Content Include="Content\plugin\daterangepicker\js\daterangepicker.js" />
     <Content Include="Content\plugin\daterangepicker\js\moment.min.js" />
@@ -181,16 +178,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\icons\" />
-    <Folder Include="Content\img\logo\" />
     <Folder Include="Content\js\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\reset.scss" />
+    <Content Include="Content\css\helpers\reset.scss" />
     <Content Include="Content\css\Style.scss" />
-    <Content Include="Content\plugin\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\plugin\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\plugin\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\plugin\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\plugin\fontawesome\fonts\AvenirNextLTPro.eot" />
     <Content Include="Content\plugin\fontawesome\fonts\AvenirNextLTPro.otf" />
     <Content Include="Content\plugin\fontawesome\fonts\AvenirNextLTPro.ttf" />
@@ -215,8 +207,14 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Content\css\helpers\variables.scss" />
+    <Content Include="Content\css\helpers\mixins.scss" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Sidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Definer.Business\Definer.Business.csproj">

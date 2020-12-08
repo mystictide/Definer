@@ -12,17 +12,16 @@
     <div class="loading">
         <div class="loader"></div>
     </div>
-    <div id="app">
-        <div>
-            @*@Html.Partial("_Header")*@
-            <div class="container layout-menu">
-                <div class="row">
-                    @*@Html.Partial("_Menu")*@
-                    @RenderBody()
-                </div>
+    <div class="page-container">
+        @Html.Partial("_Header")
+        @Html.Partial("_Menu")
+        <div class="page-content">
+            <div class="row">
+                @Html.Partial("_Sidebar")
+                @RenderBody()
             </div>
-            @*@Html.Partial("_Footer")*@
         </div>
+        @*@Html.Partial("_Footer")*@
     </div>
 
     @Scripts.Render("~/bundles/scripts")
@@ -30,6 +29,9 @@
         $(document).ready(function () {
             $(".loading").hide();
         });
+        function dropdown() {
+            $("#dd-content").toggle();
+        }
     </script>
 </body>
 </html>
