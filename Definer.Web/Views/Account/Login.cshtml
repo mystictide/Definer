@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="content">
+        <div class="form">
+            <h2>get in</h2>
+            <form action="/login" method="post" autocomplete="off">
+                @Html.AntiForgeryToken()
+                <div>
+                    <label for="UserMail">e-mail</label>
+                    <input type="text" name="UserMail" id="UserMail"/>
+                </div>
+                <div>
+                    <label for="UserPass">password</label>
+                    <input type="text" name="UserPass" id="UserPass" />
+                </div> <div>
+                    <label class="eula">
+                        <input type="checkbox" name="RememberMe" id="RememberMe" />
+                        remember me, please?
+                    </label>
+                </div>
+                <div>
+                    <button type="submit">barge through</button>
+                </div>
+            </form>
+            <h2 class="error">oh no</h2>
+            <ul>
+                <li><a href="/reset">forgot password</a></li>
+                <li><a href="/register">register</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

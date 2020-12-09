@@ -12,7 +12,10 @@ namespace Definer.Business.Users
         {
             _repo = new UsersRepository();
         }
-
+        public Entity.Users.Users Login(string Email, string Password)
+        {
+            return _repo.Login(Email, Password);
+        }
         public ProcessResult Add(Entity.Users.Users entity)
         {
             return _repo.Add(entity);
@@ -46,6 +49,14 @@ namespace Definer.Business.Users
         public ProcessResult UpdateIsActive(int ID, bool IsActive)
         {
             return _repo.UpdateIsActive(ID, IsActive);
+        }
+        public bool CheckMail(string Email)
+        {
+            return _repo.CheckMail(Email);
+        }
+        public bool CheckUsername(string Name)
+        {
+            return _repo.CheckUsername(Name);
         }
     }
 }

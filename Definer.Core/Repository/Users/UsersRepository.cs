@@ -1,14 +1,36 @@
 ﻿using Dapper;
 using Dapper.Contrib.Extensions;
 using Definer.Core.Interface;
+using Definer.Core.Repository.Helpers;
 using Definer.Entity.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Definer.Core.Repository.Users
 {
     public class UsersRepository : Connection.DbConnection, IUsers
     {
+        public Entity.Users.Users Login(string Email, string Password)
+        {
+            try
+            {
+                DynamicParameters param = new DynamicParameters();
+                param.Add("@Email", Email);
+                param.Add("@Password", Password);
+                string query = $@"SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
+
+                using (var con = GetConnection)
+                {
+                    return con.QueryFirstOrDefault<Entity.Users.Users>(query, param);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogRepository.CreateLog(ex);
+                return default;
+            }
+        }
         public ProcessResult Add(Entity.Users.Users entity)
         {
             ProcessResult result = new ProcessResult();
@@ -25,7 +47,7 @@ namespace Definer.Core.Repository.Users
             {
                 result.Message = ex.Message;
                 result.State = ProcessState.Error;
-                Helpers.LogRepository.CreateLog(ex);
+                LogRepository.CreateLog(ex);
             }
             return result;
         }
@@ -45,14 +67,14 @@ namespace Definer.Core.Repository.Users
                     {
                         result.Message = "Hesap başarıyla silindi.";
                         result.State = ProcessState.Success;
-                    }                   
+                    }
                 }
             }
             catch (Exception ex)
             {
                 result.Message = ex.Message;
                 result.State = ProcessState.Error;
-                Helpers.LogRepository.CreateLog(ex);
+                LogRepository.CreateLog(ex);
             }
             return result;
         }
@@ -68,7 +90,7 @@ namespace Definer.Core.Repository.Users
             }
             catch (Exception ex)
             {
-                Helpers.LogRepository.CreateLog(ex);
+                LogRepository.CreateLog(ex);
                 return null;
             }
         }
@@ -84,7 +106,7 @@ namespace Definer.Core.Repository.Users
             }
             catch (Exception ex)
             {
-                Helpers.LogRepository.CreateLog(ex);
+                LogRepository.CreateLog(ex);
                 return null;
             }
         }
@@ -103,7 +125,7 @@ namespace Definer.Core.Repository.Users
             }
             catch (Exception ex)
             {
-                Helpers.LogRepository.CreateLog(ex);
+                LogRepository.CreateLog(ex);
                 return null;
             }
         }
@@ -128,7 +150,7 @@ namespace Definer.Core.Repository.Users
             {
                 result.Message = ex.Message;
                 result.State = ProcessState.Error;
-                Helpers.LogRepository.CreateLog(ex);
+                LogRepository.CreateLog(ex);
             }
             return result;
         }
@@ -156,9 +178,30 @@ namespace Definer.Core.Repository.Users
             {
                 result.Message = ex.Message;
                 result.State = ProcessState.Error;
-                Helpers.LogRepository.CreateLog(ex);
+                LogRepository.CreateLog(ex);
             }
             return result;
+        }
+
+        public bool CheckMail(string Email)
+        {
+            string Query = @"Select * from Users where Email=@Email";
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@Email", Email);
+            using (var con = GetConnection)
+            {
+                return !(con.Query<Entity.Users.Users>(Query, p).Count() > 0);
+            }
+        }
+        public bool CheckUsername(string Name)
+        {
+            string Query = @"Select * from Users where Name=@Name";
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@Name", Name);
+            using (var con = GetConnection)
+            {
+                return !(con.Query<Entity.Users.Users>(Query, p).Count() > 0);
+            }
         }
     }
 }
