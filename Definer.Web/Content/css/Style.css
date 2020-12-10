@@ -201,10 +201,12 @@ body {
           text-decoration: none;
           display: block;
           text-align: left; }
+          .page-container .navbar .personal .dd-content li a:hover {
+            /*background-color: $maincolor;*/
+            border-top: 3px solid #7b4884;
+            border-bottom: 3px solid #7b4884; }
       .page-container .navbar .personal .dd-content .divider {
         border-top: 1px solid #7b4884; }
-    .page-container .navbar .personal .dd-content a:hover {
-      background-color: #7b4884; }
 
 .page-container .menu {
   height: 50px;
@@ -320,6 +322,103 @@ body {
       margin-right: 25px;
       z-index: 15;
       float: left; }
+      .page-container .page-content .main .content .thread-container h1 {
+        margin: 10px 0;
+        margin-bottom: 15px; }
+        .page-container .page-content .main .content .thread-container h1 a {
+          color: #bdbdbd;
+          line-height: 1.4;
+          word-break: break-word;
+          font-size: 22px;
+          text-decoration: none;
+          cursor: pointer; }
+      .page-container .page-content .main .content .thread-container .thread-tools {
+        float: left;
+        margin-bottom: 10px; }
+        .page-container .page-content .main .content .thread-container .thread-tools a {
+          font-size: 13px;
+          text-decoration: none;
+          cursor: pointer;
+          color: #bdbdbd; }
+          .page-container .page-content .main .content .thread-container .thread-tools a:hover {
+            border-bottom: 2px solid #7b4884; }
+        .page-container .page-content .main .content .thread-container .thread-tools .search {
+          display: inline-block;
+          margin-right: 15px; }
+          .page-container .page-content .main .content .thread-container .thread-tools .search a:after {
+            content: '\2193';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            text-indent: -99999px;
+            vertical-align: middle;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #666;
+            opacity: .7;
+            margin-left: 3px; }
+          .page-container .page-content .main .content .thread-container .thread-tools .search .search-box {
+            display: none;
+            position: absolute;
+            min-width: 250px;
+            background-color: #18181b;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border: 1px solid #bdbdbd;
+            z-index: 1; }
+            .page-container .page-content .main .content .thread-container .thread-tools .search .search-box li {
+              display: block;
+              padding: 2px 2px; }
+              .page-container .page-content .main .content .thread-container .thread-tools .search .search-box li input {
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                border-radius: 2px;
+                color: #bdbdbd;
+                float: none;
+                padding: 3px 5px;
+                display: inline-block;
+                background-color: #464648;
+                width: 78%;
+                font-size: 13px; }
+              .page-container .page-content .main .content .thread-container .thread-tools .search .search-box li button {
+                background-color: #7b4884;
+                width: 15%;
+                height: 26px;
+                float: right; }
+          .page-container .page-content .main .content .thread-container .thread-tools .search .search-box a:hover {
+            background-color: #7b4884; }
+        .page-container .page-content .main .content .thread-container .thread-tools .follow {
+          display: inline-block;
+          margin-right: 15px; }
+      .page-container .page-content .main .content .thread-container .paging {
+        display: inline-block;
+        margin-bottom: 10px;
+        float: right;
+        color: #bdbdbd;
+        white-space: nowrap;
+        font-size: 13px; }
+        .page-container .page-content .main .content .thread-container .paging select {
+          height: 23px;
+          margin-left: 5px;
+          margin-right: 5px;
+          min-width: 50px;
+          width: auto;
+          max-width: 65px;
+          padding: 2px;
+          cursor: pointer;
+          vertical-align: top;
+          border-color: #7b4884;
+          border-radius: 4px;
+          background-color: #7b4884;
+          color: #bdbdbd; }
+        .page-container .page-content .main .content .thread-container .paging a {
+          display: inline-block;
+          padding: 1px 8px;
+          margin-left: 5px;
+          border: 1px solid #7b4884;
+          border-radius: 4px;
+          color: #bdbdbd; }
       .page-container .page-content .main .content .form {
         max-width: 400px;
         padding: 10px; }

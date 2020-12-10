@@ -1,4 +1,4 @@
-﻿
+﻿@model Definer.Web.Models.UsersView
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,20 +11,20 @@
             <form action="/login" method="post" autocomplete="off">
                 @Html.AntiForgeryToken()
                 <div>
-                    <label for="UserMail">e-mail</label>
-                    <input type="text" name="UserMail" id="UserMail"/>
+                    <label for="Email">e-mail</label>
+                    @Html.TextBoxFor(m => m.Email)
                 </div>
                 <div>
-                    <label for="UserPass">password</label>
-                    <input type="text" name="UserPass" id="UserPass" />
+                    <label for="Password">password</label>
+                    @Html.PasswordFor(m => m.Password)
                 </div> <div>
                     <label class="eula">
-                        <input type="checkbox" name="RememberMe" id="RememberMe" />
+                        @Html.CheckBoxFor(m => m.RememberMe)
                         remember me, please?
                     </label>
                 </div>
                 <div>
-                    <button type="submit">barge through</button>
+                    <button type="submit" formnovalidate="formnovalidate">ring the bell</button>
                 </div>
             </form>
             <h2 class="error">oh no</h2>

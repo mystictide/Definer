@@ -2,6 +2,7 @@
 using Definer.Entity.Users;
 using Definer.Web.Models;
 using System;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -13,21 +14,37 @@ namespace Definer.Web.Controllers
         [Route("login")]
         public ActionResult Login()
         {
-            return View();
+            UsersView model = new UsersView();
+            return View(model);
         }
 
         [Route("login"), HttpPost]
-        public ActionResult Login(string UserMail, string UserPass)
+        public ActionResult Login(UsersView model)
         {
-            Users user = new UserManager().Login(UserMail, UserPass);
+            Users user = new UserManager().Login(model.Email, model.Password);
             if (user != null)
             {
                 if (user.IsActive)
                 {
-                    string DefinerCookie = "{ ID: '" + user.ID + "', Name: '" + user.Name + "' }";
+                    if (model.RememberMe)
+                    {
+                        Response.Cookies.Clear();
+                        DateTime expiryDate = DateTime.Now.AddMonths(3);
+                        FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(2, user.Name, DateTime.Now, expiryDate, true, user.ID.ToString());
+                        string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+                        HttpCookie authenticationCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+                        authenticationCookie.Expires = ticket.Expiration;
+                        Response.Cookies.Add(authenticationCookie);
 
-                    FormsAuthentication.SetAuthCookie(DefinerCookie, true);
-                    return Redirect("/");
+                        return Redirect("/");
+                    }
+                    else
+                    {
+                        string DefinerCookie = "{ ID: '" + user.ID + "', Name: '" + user.Name + "' }";
+
+                        FormsAuthentication.SetAuthCookie(DefinerCookie, true);
+                        return Redirect("/");
+                    }
                 }
                 else
                 {
@@ -53,7 +70,7 @@ namespace Definer.Web.Controllers
             {
                 UsersView model = new UsersView();
                 return View(model);
-            }       
+            }
         }
 
         [Route("register"), HttpPost]

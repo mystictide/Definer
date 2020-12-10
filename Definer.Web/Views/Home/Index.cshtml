@@ -2,3 +2,34 @@
 @{
     ViewBag.Title = "Definer";
 }
+
+<div class="main">
+    <div class="content">
+        <div class="thread-container">
+            <h1>
+                <a href="/">testing latest post testing latest post</a>
+            </h1>
+            <div class="thread-tools">
+                <div class="search">
+                    <a onclick="searchbox()">search</a>
+                    <div class="search-box" id="search-box">
+                        <ul>
+                            <li>
+                                <input type="text" />
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="follow"><a href="/">follow</a></div>
+            </div>
+            <div class="paging">
+                <a href="/">«</a>
+                <select><option selected="selected">1</option><option>2</option></select>
+                /
+                <a href="/" class="last">9</a>
+                <a href="/" class="next">»</a>
+            </div>
+        </div>
+    </div>
+</div>

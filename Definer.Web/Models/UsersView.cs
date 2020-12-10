@@ -21,5 +21,6 @@ namespace Definer.Web.Models
         [Required]
         [Compare("isTrue", ErrorMessage = "we're not in an agreement now, are we?")]
         public bool EULA { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

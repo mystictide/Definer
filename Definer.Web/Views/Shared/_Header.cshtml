@@ -2,7 +2,7 @@
 @{
     Layout = null;
     bool Logged;
-    if (Request.Cookies["AuthCookie"] != null)
+    if (Request.Cookies["DefinerLoginAuth"] != null)
     {
         Logged = true;
     }
@@ -28,12 +28,12 @@
                 <li><a href="/"><i class="far fa-envelope fa-lg"></i></a></li>
                 <li>
                     <div class="dropdown">
-                        <a href="/logout" class="dropbtn"><i class="fas fa-ellipsis-h fa-lg"></i></a>
+                        <a href="/" class="dropbtn"><i class="fas fa-ellipsis-h fa-lg"></i></a>
                         <div class="dd-content">
                             <ul>
                                 <li><a href="/">settings</a></li>
                                 <li><a href="/">test</a></li>
-                                <li class="divider"><a href="/">logout</a></li>
+                                <li class="divider"><a href="/logout">logout</a></li>
                             </ul>
                         </div>
                     </div>

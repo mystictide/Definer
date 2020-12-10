@@ -181,16 +181,18 @@ body {
                         text-decoration: none;
                         display: block;
                         text-align: left;
+
+                        &:hover {
+                            /*background-color: $maincolor;*/
+                            border-top: 3px solid $maincolor;
+                            border-bottom: 3px solid $maincolor;
+                        }
                     }
                 }
 
                 .divider {
                     border-top: 1px solid $maincolor;
                 }
-            }
-
-            .dd-content a:hover {
-                background-color: $maincolor;
             }
         }
     }
@@ -361,6 +363,136 @@ body {
                 margin-right: 25px;
                 z-index: 15;
                 float: left;
+
+                .thread-container {
+                    h1 {
+                        margin: 10px 0;
+                        margin-bottom: 15px;
+
+                        a {
+                            color: $text-color;
+                            line-height: 1.4;
+                            word-break: break-word;
+                            font-size: 22px;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .thread-tools {
+                        float: left;
+                        margin-bottom: 10px;
+
+                        a {
+                            font-size: 13px;
+                            text-decoration: none;
+                            cursor: pointer;
+                            color: $text-color;
+
+                            &:hover {
+                                border-bottom: 2px solid $maincolor;
+                            }
+                        }
+
+                        .search {
+                            display: inline-block;
+                            margin-right: 15px;
+
+                            a {
+                                &:after {
+                                    content: '\2193';
+                                    display: inline-block;
+                                    width: 0;
+                                    height: 0;
+                                    overflow: hidden;
+                                    text-indent: -99999px;
+                                    vertical-align: middle;
+                                    border-left: 4px solid transparent;
+                                    border-right: 4px solid transparent;
+                                    border-top: 4px solid #666;
+                                    opacity: .7;
+                                    margin-left: 3px;
+                                }
+                            }
+
+                            .search-box {
+                                display: none;
+                                position: absolute;
+                                min-width: 250px;
+                                background-color: $bgcolor;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                border: 1px solid $text-color;
+                                z-index: 1;
+
+                                li {
+                                    display: block;
+                                    padding: 2px 2px;
+
+                                    input {
+                                        @include border-radius(2px);
+                                        color: $text-color;
+                                        float: none;
+                                        padding: 3px 5px;
+                                        display: inline-block;
+                                        background-color: #464648;
+                                        width: 78%;
+                                        font-size: 13px;
+                                    }
+
+                                    button {
+                                        background-color: $maincolor;
+                                        width: 15%;
+                                        height: 26px;
+                                        float: right;
+                                    }
+                                }
+                            }
+
+                            .search-box a:hover {
+                                background-color: $maincolor;
+                            }
+                        }
+
+                        .follow {
+                            display: inline-block;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    .paging {
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        float: right;
+                        color: $text-color;
+                        white-space: nowrap;
+                        font-size:13px;
+
+                        select {
+                            height: 23px;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                            min-width: 50px;
+                            width: auto;
+                            max-width: 65px;
+                            padding: 2px;
+                            cursor: pointer;
+                            vertical-align: top;
+                            border-color: $maincolor;
+                            border-radius: 4px;
+                            background-color: $maincolor;
+                            color: $text-color;
+                        }
+
+                        a {
+                            display: inline-block;
+                            padding: 1px 8px;
+                            margin-left: 5px;
+                            border: 1px solid $maincolor;
+                            border-radius: 4px;
+                            color: $text-color;
+                        }
+                    }
+                }
 
                 .form {
                     max-width: 400px;
