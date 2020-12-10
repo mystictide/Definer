@@ -6,32 +6,34 @@
 
 <div class="main">
     <div class="content">
-        <div class="form">
-            <h2>get in</h2>
-            <form action="/login" method="post" autocomplete="off">
-                @Html.AntiForgeryToken()
-                <div>
-                    <label for="Email">e-mail</label>
-                    @Html.TextBoxFor(m => m.Email)
-                </div>
-                <div>
-                    <label for="Password">password</label>
-                    @Html.PasswordFor(m => m.Password)
-                </div> <div>
-                    <label class="eula">
-                        @Html.CheckBoxFor(m => m.RememberMe)
-                        remember me, please?
-                    </label>
-                </div>
-                <div>
-                    <button type="submit" formnovalidate="formnovalidate">ring the bell</button>
-                </div>
-            </form>
-            <h2 class="error">oh no</h2>
-            <ul>
-                <li><a href="/reset">forgot password</a></li>
-                <li><a href="/register">register</a></li>
-            </ul>
+        <div class="form-container">
+            <div class="form">
+                <h2>get in</h2>
+                <form action="/login" method="post" autocomplete="off">
+                    @Html.AntiForgeryToken()
+                    <div>
+                        <label for="Email">e-mail</label>
+                        @Html.TextBoxFor(m => m.Email)
+                    </div>
+                    <div>
+                        <label for="Password">password</label>
+                        @Html.PasswordFor(m => m.Password)
+                    </div> <div>
+                        <label class="eula">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            remember me, please?
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit" formnovalidate="formnovalidate">ring the bell</button>
+                    </div>
+                </form>
+                <h2 class="error">oh no</h2>
+                <ul>
+                    <li><a href="/reset">forgot password</a></li>
+                    <li><a href="/register">register</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

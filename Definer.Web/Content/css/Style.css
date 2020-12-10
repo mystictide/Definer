@@ -316,89 +316,89 @@ body {
         border: 3px solid #18181b; }
   .page-container .page-content .main {
     margin-left: 245px; }
-    .page-container .page-content .main .content {
-      width: 750px;
+    .page-container .page-content .main .content .thread-body {
+      width: 645px;
       margin-left: 25px;
       margin-right: 25px;
-      z-index: 15;
-      float: left; }
-      .page-container .page-content .main .content .thread-container h1 {
+      z-index: 20;
+      float: left;
+      display: block; }
+      .page-container .page-content .main .content .thread-body .thread-container h1 {
         margin: 10px 0;
         margin-bottom: 15px; }
-        .page-container .page-content .main .content .thread-container h1 a {
+        .page-container .page-content .main .content .thread-body .thread-container h1 a {
           color: #bdbdbd;
           line-height: 1.4;
           word-break: break-word;
           font-size: 22px;
           text-decoration: none;
           cursor: pointer; }
-      .page-container .page-content .main .content .thread-container .thread-tools {
+      .page-container .page-content .main .content .thread-body .thread-container .thread-tools a {
+        font-size: 13px;
+        text-decoration: none;
+        cursor: pointer;
+        color: #bdbdbd; }
+        .page-container .page-content .main .content .thread-body .thread-container .thread-tools a:hover {
+          border-bottom: 2px solid #7b4884; }
+      .page-container .page-content .main .content .thread-body .thread-container .thread-tools .search {
         float: left;
-        margin-bottom: 10px; }
-        .page-container .page-content .main .content .thread-container .thread-tools a {
-          font-size: 13px;
-          text-decoration: none;
-          cursor: pointer;
-          color: #bdbdbd; }
-          .page-container .page-content .main .content .thread-container .thread-tools a:hover {
-            border-bottom: 2px solid #7b4884; }
-        .page-container .page-content .main .content .thread-container .thread-tools .search {
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-right: 15px; }
+        .page-container .page-content .main .content .thread-body .thread-container .thread-tools .search a:after {
+          content: '\2193';
           display: inline-block;
-          margin-right: 15px; }
-          .page-container .page-content .main .content .thread-container .thread-tools .search a:after {
-            content: '\2193';
-            display: inline-block;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-            text-indent: -99999px;
-            vertical-align: middle;
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-            border-top: 4px solid #666;
-            opacity: .7;
-            margin-left: 3px; }
-          .page-container .page-content .main .content .thread-container .thread-tools .search .search-box {
-            display: none;
-            position: absolute;
-            min-width: 250px;
-            background-color: #18181b;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            border: 1px solid #bdbdbd;
-            z-index: 1; }
-            .page-container .page-content .main .content .thread-container .thread-tools .search .search-box li {
-              display: block;
-              padding: 2px 2px; }
-              .page-container .page-content .main .content .thread-container .thread-tools .search .search-box li input {
-                -webkit-border-radius: 2px;
-                -moz-border-radius: 2px;
-                -ms-border-radius: 2px;
-                border-radius: 2px;
-                color: #bdbdbd;
-                float: none;
-                padding: 3px 5px;
-                display: inline-block;
-                background-color: #464648;
-                width: 78%;
-                font-size: 13px; }
-              .page-container .page-content .main .content .thread-container .thread-tools .search .search-box li button {
-                background-color: #7b4884;
-                width: 15%;
-                height: 26px;
-                float: right; }
-          .page-container .page-content .main .content .thread-container .thread-tools .search .search-box a:hover {
-            background-color: #7b4884; }
-        .page-container .page-content .main .content .thread-container .thread-tools .follow {
-          display: inline-block;
-          margin-right: 15px; }
-      .page-container .page-content .main .content .thread-container .paging {
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          text-indent: -99999px;
+          vertical-align: middle;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 4px solid #666;
+          opacity: .7;
+          margin-left: 3px; }
+        .page-container .page-content .main .content .thread-body .thread-container .thread-tools .search .search-box {
+          display: none;
+          position: absolute;
+          min-width: 250px;
+          background-color: #18181b;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          border: 1px solid #bdbdbd;
+          z-index: 1; }
+          .page-container .page-content .main .content .thread-body .thread-container .thread-tools .search .search-box li {
+            display: block;
+            padding: 2px 2px; }
+            .page-container .page-content .main .content .thread-body .thread-container .thread-tools .search .search-box li input {
+              -webkit-border-radius: 2px;
+              -moz-border-radius: 2px;
+              -ms-border-radius: 2px;
+              border-radius: 2px;
+              color: #bdbdbd;
+              float: none;
+              padding: 3px 5px;
+              display: inline-block;
+              background-color: #464648;
+              width: 78%;
+              font-size: 13px; }
+            .page-container .page-content .main .content .thread-body .thread-container .thread-tools .search .search-box li button {
+              background-color: #7b4884;
+              width: 15%;
+              height: 26px;
+              float: right; }
+        .page-container .page-content .main .content .thread-body .thread-container .thread-tools .search .search-box a:hover {
+          background-color: #7b4884; }
+      .page-container .page-content .main .content .thread-body .thread-container .thread-tools .follow {
+        display: inline-block;
+        margin-right: 15px; }
+      .page-container .page-content .main .content .thread-body .thread-container .paging {
         display: inline-block;
         margin-bottom: 10px;
         float: right;
         color: #bdbdbd;
         white-space: nowrap;
         font-size: 13px; }
-        .page-container .page-content .main .content .thread-container .paging select {
+        .page-container .page-content .main .content .thread-body .thread-container .paging select {
           height: 23px;
           margin-left: 5px;
           margin-right: 5px;
@@ -412,32 +412,112 @@ body {
           border-radius: 4px;
           background-color: #7b4884;
           color: #bdbdbd; }
-        .page-container .page-content .main .content .thread-container .paging a {
+        .page-container .page-content .main .content .thread-body .thread-container .paging a {
           display: inline-block;
           padding: 1px 8px;
           margin-left: 5px;
           border: 1px solid #7b4884;
           border-radius: 4px;
           color: #bdbdbd; }
-      .page-container .page-content .main .content .form {
+      .page-container .page-content .main .content .thread-body .thread-container .reply-content {
+        list-style: none;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 24px; }
+        .page-container .page-content .main .content .thread-body .thread-container .reply-content li {
+          position: relative;
+          padding: 20px 0 25px 0;
+          position: relative; }
+          .page-container .page-content .main .content .thread-body .thread-container .reply-content li .reply {
+            margin-bottom: 5px;
+            overflow: hidden;
+            max-height: 237px;
+            position: relative;
+            font-size: 15px; }
+            .page-container .page-content .main .content .thread-body .thread-container .reply-content li .reply a {
+              color: #7b4884; }
+              .page-container .page-content .main .content .thread-body .thread-container .reply-content li .reply a:hover {
+                border-bottom: 1px solid #bdbdbd; }
+        .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail {
+          display: block;
+          font-size: 14px; }
+          .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .reactions {
+            float: left;
+            position: relative; }
+            .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .reactions .rated {
+              padding-left: 15px; }
+              .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .reactions .rated .up {
+                padding-right: 15px; }
+                .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .reactions .rated .up i {
+                  padding-right: 8px; }
+                .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .reactions .rated .up:hover {
+                  cursor: pointer;
+                  color: #7b4884; }
+              .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .reactions .rated .down i {
+                padding-right: 8px; }
+              .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .reactions .rated .down:hover {
+                cursor: pointer;
+                color: #c71d1d; }
+          .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info {
+            text-align: right;
+            float: right; }
+            .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .reply-date {
+              margin-right: 5px;
+              color: #bdbdbd;
+              font-size: 12px; }
+              .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .reply-date:hover {
+                cursor: pointer;
+                border-bottom: 1px outset #bdbdbd; }
+            .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .author {
+              color: #7b4884;
+              margin-right: 5px; }
+              .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .author:hover {
+                cursor: pointer;
+                border-bottom: 1px outset #bdbdbd; }
+            .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .author-box {
+              display: none;
+              position: absolute;
+              min-width: 120px;
+              background-color: #18181b;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              border: 1px solid #bdbdbd;
+              z-index: 1; }
+              .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .author-box li {
+                display: block; }
+                .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .author-box li a {
+                  color: #bdbdbd;
+                  float: none;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left; }
+                  .page-container .page-content .main .content .thread-body .thread-container .reply-content .reply-detail .info .author-box li a:hover {
+                    /*background-color: $maincolor;*/
+                    border-top: 3px solid #7b4884;
+                    border-bottom: 3px solid #7b4884; }
+    .page-container .page-content .main .content .form-container {
+      margin-left: 15px; }
+      .page-container .page-content .main .content .form-container .form {
         max-width: 400px;
         padding: 10px; }
-        .page-container .page-content .main .content .form h2 {
+        .page-container .page-content .main .content .form-container .form h2 {
           line-height: 1.4;
           font-size: 16px;
           font-weight: bold;
           margin-bottom: 20px; }
-        .page-container .page-content .main .content .form form {
+        .page-container .page-content .main .content .form-container .form form {
           margin-bottom: 20px;
           padding-top: 10px; }
-          .page-container .page-content .main .content .form form div {
+          .page-container .page-content .main .content .form-container .form form div {
             margin-bottom: 15px; }
-            .page-container .page-content .main .content .form form div label {
+            .page-container .page-content .main .content .form-container .form form div label {
               display: block;
               margin-bottom: 5px;
               text-align: left;
               width: 100%; }
-            .page-container .page-content .main .content .form form div input {
+            .page-container .page-content .main .content .form-container .form form div input {
               color: #efeff1;
               background-color: #464648;
               min-height: 30px;
@@ -448,11 +528,11 @@ body {
               -moz-border-radius: 6px;
               -ms-border-radius: 6px;
               border-radius: 6px; }
-            .page-container .page-content .main .content .form form div .field-validation-error {
+            .page-container .page-content .main .content .form-container .form form div .field-validation-error {
               padding: 2px 10px;
               font-size: 14px;
               color: #c71d1d; }
-            .page-container .page-content .main .content .form form div button {
+            .page-container .page-content .main .content .form-container .form form div button {
               -webkit-border-radius: 6px;
               -moz-border-radius: 6px;
               -ms-border-radius: 6px;
@@ -462,34 +542,34 @@ body {
               color: #efeff1;
               background-color: #7b4884;
               cursor: pointer; }
-            .page-container .page-content .main .content .form form div .eula {
+            .page-container .page-content .main .content .form-container .form form div .eula {
               width: 50%;
               font-size: 13px;
               text-align: left;
               display: block;
               line-height: 35px; }
-              .page-container .page-content .main .content .form form div .eula input {
+              .page-container .page-content .main .content .form-container .form form div .eula input {
                 max-height: 20px;
                 max-width: 20px;
                 cursor: pointer;
                 float: left;
                 margin-right: 10px; }
-              .page-container .page-content .main .content .form form div .eula a {
+              .page-container .page-content .main .content .form-container .form form div .eula a {
                 font-size: 13px;
                 float: left;
                 text-decoration: none;
                 color: #bdbdbd;
                 margin-right: 5px; }
-                .page-container .page-content .main .content .form form div .eula a:hover {
+                .page-container .page-content .main .content .form-container .form form div .eula a:hover {
                   color: #7b4884;
                   border-top: 2px solid #7b4884;
                   border-bottom: 2px solid #7b4884; }
-        .page-container .page-content .main .content .form ul li a {
+        .page-container .page-content .main .content .form-container .form ul li a {
           text-decoration: none;
           color: #bdbdbd;
           font-size: 14px; }
-          .page-container .page-content .main .content .form ul li a:hover {
+          .page-container .page-content .main .content .form-container .form ul li a:hover {
             color: #7b4884; }
-        .page-container .page-content .main .content .form .error {
+        .page-container .page-content .main .content .form-container .form .error {
           display: inline-block;
           border-top: 2px solid #7b4884; }
