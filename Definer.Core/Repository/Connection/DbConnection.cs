@@ -8,7 +8,7 @@ namespace Definer.Core.Repository.Connection
         private static string connectionString { get; set; }
         public DbConnection()
         {
-            connectionString = "Server=MYSTIC;Database=Definer;User Id=sa;Password=123456;";
+            connectionString = "Server=ServerName;Database=DBName;User Id=ID;Password=Password;";
         }
         public static IDbConnection GetConnection
         {
