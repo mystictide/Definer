@@ -48,6 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Entries\Categories.cs" />
+    <Compile Include="Entries\Replies.cs" />
+    <Compile Include="Entries\Threads.cs" />
+    <Compile Include="Entries\Thread_Categories.cs" />
     <Compile Include="Helpers\FilteredList.cs" />
     <Compile Include="Helpers\ProcessResult.cs" />
     <Compile Include="Helpers\Log.cs" />

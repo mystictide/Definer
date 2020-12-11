@@ -85,11 +85,34 @@ body {
             }
         }
 
+        .create {
+            display: inline-block;
+            float: left;
+            margin: 17px 0 0 18%;
+            width: 100px;
+
+            a {
+                display: inline-block;
+                padding: 5px 10px;
+                color: $maincolor;
+                border: 1px solid $maincolor;
+                @include border-radius(4px);
+                text-align:center;
+
+                &:hover {
+                    background-color:$maincolor;
+                    border-color:$text-color;
+                    color:$text-color;
+                    cursor: pointer;
+                }
+            }
+        }
+
         .search-form {
             display: inline-block;
             float: left;
-            margin: 20px 0 0 25%;
-            width: 500px;
+            margin: 20px 10% 0 0;
+            width: 340px;
 
             .box {
                 padding-left: 10px;
@@ -104,7 +127,7 @@ body {
                 width: 100%;
 
                 @include responsive($lg) {
-                    width: 60%;
+                    width: 80%;
                 }
             }
 

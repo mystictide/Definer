@@ -11,7 +11,6 @@ namespace Definer.Core.Interface
     {
         bool CheckMail(string Email);
         bool CheckUsername(string Name);
-
         Users Login(string Email, string Password);
     }
 }
